@@ -634,19 +634,26 @@ function submitBooking(e) {
   bookings.push({ name, email, phone, site, date: new Date().toISOString() });
   localStorage.setItem('nexro_bookings', JSON.stringify(bookings));
 
-  // Send Telegram alert
-  const msg = `🔔 NEW LEAD — Nexro Marketing\n\n` +
+  // Send Telegram alert — TOP PRIORITY (3 messages to make sure you see it)
+  const msg = `🚨🚨🚨 NEW CLIENT LEAD 🚨🚨🚨\n\n` +
+    `💰 SOMEONE WANTS TO PAY YOU\n\n` +
     `Name: ${name}\n` +
     `Email: ${email}\n` +
     `Phone: ${phone || 'Not provided'}\n` +
-    `Website: ${site || 'Not provided'}\n` +
-    `Time: ${new Date().toLocaleString()}`;
+    `Website: ${site || 'Not provided'}\n\n` +
+    `⏰ ${new Date().toLocaleString()}\n\n` +
+    `CALL THEM BACK ASAP — first response wins the deal.`;
 
-  fetch('https://api.telegram.org/bot8214365550:AAEh3kELwvLGgVs4SL8oMEW_XNJK9QSO4yc/sendMessage', {
+  const tg = (text) => fetch('https://api.telegram.org/bot8214365550:AAEh3kELwvLGgVs4SL8oMEW_XNJK9QSO4yc/sendMessage', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: '7939961929', text: msg }),
+    body: JSON.stringify({ chat_id: '7939961929', text }),
   }).catch(() => {});
+
+  // Send 3 times with delays so your phone blows up
+  tg(msg);
+  setTimeout(() => tg(`🔔 REMINDER: ${name} (${email}) just submitted a consultation request on Nexro Marketing. Don't leave them waiting!`), 5000);
+  setTimeout(() => tg(`⚡ LEAD ALERT: Call ${phone || email} back NOW. Speed to lead = close rate.`), 60000);
 
   // Show success
   e.target.style.display = 'none';
