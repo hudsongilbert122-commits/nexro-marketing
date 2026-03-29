@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hudsongilbert122-commits.github.io/nexro-marketing/sitemap.xml
