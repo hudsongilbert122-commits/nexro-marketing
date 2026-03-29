@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mountain View Dental — Denver, CO</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0c1222; --card:#162032; --border:#1e3048; --text:#e2e8f0; --muted:#94a3b8; --accent:#60a5fa; --accent2:#93c5fd; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:16px 32px; border-bottom:1px solid var(--border); }
+  .logo { font-size:1.2em; font-weight:800; } .logo span { color:var(--accent); }
+  .nav-r { display:flex; gap:24px; align-items:center; }
+  .nav-r a { color:var(--muted); text-decoration:none; font-size:0.85em; font-weight:500; }
+  .cta-btn { background:var(--accent); color:#0c1222; padding:10px 22px; border-radius:8px; font-weight:700; font-size:0.85em; text-decoration:none; }
+  .alert-bar { background:rgba(96,165,250,0.1); border:1px solid rgba(96,165,250,0.2); border-radius:10px; padding:12px 20px; margin:16px 32px; display:flex; justify-content:space-between; align-items:center; }
+  .alert-bar span { font-size:0.85em; color:var(--accent2); font-weight:600; }
+  .hero { padding:60px 32px 80px; max-width:900px; margin:0 auto; text-align:center; }
+  .hero-badge { display:inline-block; background:rgba(96,165,250,0.1); color:var(--accent2); font-size:0.75em; font-weight:600; padding:6px 14px; border-radius:20px; margin-bottom:20px; }
+  .hero h1 { font-size:2.6em; font-weight:900; letter-spacing:-0.03em; line-height:1.1; margin-bottom:16px; }
+  .hero h1 span { color:var(--accent); }
+  .hero p { font-size:1.05em; color:var(--muted); margin-bottom:12px; line-height:1.6; }
+  .hero .rating { color:#fbbf24; font-size:1.1em; margin-bottom:24px; display:block; }
+  .hero .rating span { color:var(--muted); font-size:0.75em; }
+  .hero-btns { display:flex; gap:12px; justify-content:center; }
+  .btn-outline { border:1px solid var(--border); color:var(--text); padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9em; }
+  .insurance { padding:40px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .insurance h2 { font-size:1.4em; font-weight:700; margin-bottom:16px; }
+  .ins-grid { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .ins-tag { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:10px 20px; font-size:0.82em; font-weight:600; }
+  .services { padding:40px 32px; max-width:900px; margin:0 auto; }
+  .services h2 { font-size:1.8em; font-weight:800; text-align:center; margin-bottom:32px; }
+  .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .srv-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:28px; text-align:center; }
+  .srv-card .icon { font-size:2em; margin-bottom:12px; }
+  .srv-card h3 { font-size:1em; font-weight:700; margin-bottom:6px; }
+  .srv-card p { font-size:0.8em; color:var(--muted); line-height:1.5; }
+  .team { padding:50px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .team h2 { font-size:1.6em; font-weight:800; margin-bottom:24px; }
+  .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .team-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; text-align:center; }
+  .team-avatar { width:64px; height:64px; border-radius:50%; background:var(--border); margin:0 auto 12px; display:flex; align-items:center; justify-content:center; font-size:1.5em; }
+  .team-card h3 { font-size:0.95em; font-weight:700; }
+  .team-card .role { font-size:0.78em; color:var(--accent2); }
+  .team-card p { font-size:0.75em; color:var(--muted); margin-top:6px; }
+  .reviews { padding:40px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .reviews h2 { font-size:1.6em; font-weight:800; margin-bottom:20px; }
+  .rev-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .rev-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px; text-align:left; }
+  .rev-card .stars { color:#fbbf24; margin-bottom:8px; }
+  .rev-card p { font-size:0.82em; color:var(--muted); font-style:italic; line-height:1.5; }
+  .rev-card .name { font-size:0.78em; font-weight:600; color:var(--text); margin-top:8px; }
+  .bottom-cta { padding:60px 32px; text-align:center; }
+  .bottom-cta h2 { font-size:2em; font-weight:800; margin-bottom:12px; }
+  .bottom-cta p { color:var(--muted); margin-bottom:24px; }
+  footer { padding:24px 32px; text-align:center; border-top:1px solid var(--border); color:var(--muted); font-size:0.78em; }
+  .demo-banner { background:var(--accent); text-align:center; padding:8px; font-size:0.75em; font-weight:600; color:#0c1222; }
+  .demo-banner a { color:#0c1222; }
+</style>
+</head>
+<body>
+<div class="demo-banner">This is a concept redesign by <a href="../">Nexro Marketing</a> &mdash; <a href="../#cta">Get yours built</a></div>
+<nav>
+  <div class="logo">Mountain View <span>Dental</span></div>
+  <div class="nav-r">
+    <a href="#">Services</a>
+    <a href="#">Our Team</a>
+    <a href="#">Insurance</a>
+    <a href="#">Reviews</a>
+    <a href="#" class="cta-btn">New Patient? Start Here</a>
+  </div>
+</nav>
+<div class="alert-bar">
+  <span>Now accepting new patients &mdash; same-week appointments available</span>
+  <a href="#" class="cta-btn" style="font-size:0.78em;padding:8px 16px">Request Appointment</a>
+</div>
+<section class="hero">
+  <div class="hero-badge">Family & Cosmetic Dentistry &mdash; Denver, CO</div>
+  <h1>Your family deserves <span>great dental care.</span></h1>
+  <p>Gentle, modern dentistry for the whole family. From routine cleanings to smile makeovers — we make every visit comfortable.</p>
+  <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.9 stars from 230+ Google reviews</span></div>
+  <div class="hero-btns">
+    <a href="#" class="cta-btn" style="padding:14px 32px;font-size:1em">Book Appointment</a>
+    <a href="#" class="btn-outline">Call (303) 555-0892</a>
+  </div>
+</section>
+<section class="insurance">
+  <h2>Insurance We Accept</h2>
+  <div class="ins-grid">
+    <div class="ins-tag">Delta Dental</div>
+    <div class="ins-tag">Cigna</div>
+    <div class="ins-tag">Aetna</div>
+    <div class="ins-tag">MetLife</div>
+    <div class="ins-tag">United Healthcare</div>
+    <div class="ins-tag">Blue Cross</div>
+    <div class="ins-tag">Guardian</div>
+    <div class="ins-tag">+ More</div>
+  </div>
+</section>
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="srv-grid">
+    <div class="srv-card"><div class="icon">&#129463;</div><h3>Cleanings & Exams</h3><p>Preventive care to keep your smile healthy. Includes X-rays and oral cancer screening.</p></div>
+    <div class="srv-card"><div class="icon">&#128171;</div><h3>Teeth Whitening</h3><p>Professional in-office whitening. Up to 8 shades whiter in one visit.</p></div>
+    <div class="srv-card"><div class="icon">&#129657;</div><h3>Dental Implants</h3><p>Permanent tooth replacement that looks and feels natural. Lifetime warranty.</p></div>
+    <div class="srv-card"><div class="icon">&#128516;</div><h3>Invisalign</h3><p>Straight teeth without metal braces. Free virtual consultation available.</p></div>
+    <div class="srv-card"><div class="icon">&#127995;</div><h3>Crowns & Bridges</h3><p>Same-day CEREC crowns. No temporary crowns, no second visit needed.</p></div>
+    <div class="srv-card"><div class="icon">&#128118;</div><h3>Pediatric Dentistry</h3><p>Kid-friendly care from first tooth to braces. We make it fun!</p></div>
+  </div>
+</section>
+<section class="team">
+  <h2>Meet Your Dentists</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">&#129489;</div>
+      <h3>Dr. Emily Chen</h3>
+      <div class="role">General & Cosmetic Dentistry</div>
+      <p>CU School of Dental Medicine, 15+ years experience. Loves helping patients overcome dental anxiety.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">&#129489;</div>
+      <h3>Dr. James Park</h3>
+      <div class="role">Implants & Oral Surgery</div>
+      <p>Board-certified oral surgeon. Specializes in dental implants and wisdom teeth extraction.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">&#129489;</div>
+      <h3>Dr. Maria Santos</h3>
+      <div class="role">Pediatric Dentistry</div>
+      <p>Makes every kid's visit fun. Certified in pediatric sedation dentistry.</p>
+    </div>
+  </div>
+</section>
+<section class="reviews">
+  <h2>Patient Reviews</h2>
+  <div class="rev-row">
+    <div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best dentist I've ever been to. Dr. Chen is so gentle and the office is beautiful. Online booking makes it so easy."</p><div class="name">— Amanda K.</div></div>
+    <div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My kids actually WANT to go to the dentist now. Dr. Santos is amazing with children."</p><div class="name">— Mike J.</div></div>
+    <div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Got my implant done here. The whole process was smooth and the result looks completely natural."</p><div class="name">— Robert H.</div></div>
+  </div>
+</section>
+<section class="bottom-cta">
+  <h2>New patients welcome.</h2>
+  <p>Book your first visit online. Most insurance accepted. Same-week availability.</p>
+  <a href="#" class="cta-btn" style="padding:16px 36px;font-size:1.05em">Request Your Appointment</a>
+</section>
+<footer>&copy; 2026 Mountain View Dental &mdash; Denver, CO &mdash; (303) 555-0892</footer>
+</body>
+</html>

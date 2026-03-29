@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe's Plumbing & Heating — Portland, OR</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0a0f1a; --card:#111827; --border:#1e293b; --text:#e2e8f0; --muted:#64748b; --accent:#3b82f6; --accent2:#60a5fa; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:16px 32px; border-bottom:1px solid var(--border); }
+  .logo { font-size:1.2em; font-weight:800; } .logo span { color:var(--accent); }
+  .nav-r { display:flex; gap:24px; align-items:center; }
+  .nav-r a { color:var(--muted); text-decoration:none; font-size:0.85em; font-weight:500; }
+  .nav-r a:hover { color:var(--text); }
+  .cta-btn { background:var(--accent); color:#fff; padding:10px 22px; border-radius:8px; font-weight:700; font-size:0.85em; text-decoration:none; }
+  .hero { padding:80px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .hero-badge { display:inline-block; background:rgba(59,130,246,0.1); color:var(--accent2); font-size:0.75em; font-weight:600; padding:6px 14px; border-radius:20px; margin-bottom:20px; }
+  .hero h1 { font-size:2.8em; font-weight:900; letter-spacing:-0.03em; line-height:1.1; margin-bottom:16px; }
+  .hero h1 span { color:var(--accent); }
+  .hero p { font-size:1.1em; color:var(--muted); margin-bottom:32px; line-height:1.6; }
+  .hero-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn-outline { border:1px solid var(--border); color:var(--text); padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9em; }
+  .stats { display:flex; gap:40px; justify-content:center; margin-top:50px; padding-top:30px; border-top:1px solid var(--border); }
+  .stat-n { font-size:2em; font-weight:800; } .stat-l { font-size:0.75em; color:var(--muted); }
+  .services { padding:60px 32px; max-width:900px; margin:0 auto; }
+  .services h2 { font-size:1.8em; font-weight:800; text-align:center; margin-bottom:32px; }
+  .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .srv-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:28px; text-align:center; }
+  .srv-card .icon { font-size:2em; margin-bottom:12px; }
+  .srv-card h3 { font-size:1em; font-weight:700; margin-bottom:6px; }
+  .srv-card p { font-size:0.8em; color:var(--muted); line-height:1.5; }
+  .trust { padding:40px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .trust-row { display:flex; gap:24px; justify-content:center; margin-top:16px; flex-wrap:wrap; }
+  .trust-item { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px 28px; }
+  .trust-item .stars { color:#fbbf24; font-size:1.1em; }
+  .trust-item p { font-size:0.82em; color:var(--muted); margin-top:6px; font-style:italic; max-width:280px; }
+  .trust-item .name { font-size:0.78em; font-weight:600; color:var(--text); margin-top:8px; }
+  .bottom-cta { padding:60px 32px; text-align:center; }
+  .bottom-cta h2 { font-size:2em; font-weight:800; margin-bottom:12px; }
+  .bottom-cta p { color:var(--muted); margin-bottom:24px; }
+  footer { padding:24px 32px; text-align:center; border-top:1px solid var(--border); color:var(--muted); font-size:0.78em; }
+  .demo-banner { background:var(--accent); text-align:center; padding:8px; font-size:0.75em; font-weight:600; }
+  .demo-banner a { color:#fff; }
+</style>
+</head>
+<body>
+<div class="demo-banner">This is a concept redesign by <a href="../">Nexro Marketing</a> &mdash; <a href="../#cta">Get yours built</a></div>
+<nav>
+  <div class="logo">Joe's <span>Plumbing</span></div>
+  <div class="nav-r">
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Reviews</a>
+    <a href="#" class="cta-btn">Get Free Quote</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-badge">Serving Portland Since 1998</div>
+  <h1>Portland's most <span>trusted plumber.</span></h1>
+  <p>24/7 emergency service. Licensed, insured, and backed by 500+ five-star reviews. From leaky faucets to full remodels — we've got you covered.</p>
+  <div class="hero-btns">
+    <a href="#" class="cta-btn" style="padding:14px 32px;font-size:1em">Call (503) 555-0147</a>
+    <a href="#" class="btn-outline">Book Online</a>
+  </div>
+  <div class="stats">
+    <div><div class="stat-n">25+</div><div class="stat-l">Years Experience</div></div>
+    <div><div class="stat-n">500+</div><div class="stat-l">5-Star Reviews</div></div>
+    <div><div class="stat-n">24/7</div><div class="stat-l">Emergency Service</div></div>
+    <div><div class="stat-n">1hr</div><div class="stat-l">Avg Response Time</div></div>
+  </div>
+</section>
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="srv-grid">
+    <div class="srv-card"><div class="icon">&#128295;</div><h3>Plumbing Repairs</h3><p>Leaks, clogs, burst pipes — fixed fast with upfront pricing. No surprise bills.</p></div>
+    <div class="srv-card"><div class="icon">&#127777;&#65039;</div><h3>Heating & Cooling</h3><p>Furnace repair, installation, and maintenance to keep your home comfortable year-round.</p></div>
+    <div class="srv-card"><div class="icon">&#128167;</div><h3>Drain Cleaning</h3><p>Professional drain clearing with camera inspection. We find the problem and fix it right.</p></div>
+    <div class="srv-card"><div class="icon">&#128704;</div><h3>Water Heaters</h3><p>Tank and tankless water heater installation, repair, and replacement.</p></div>
+    <div class="srv-card"><div class="icon">&#128706;</div><h3>Bathroom Remodels</h3><p>Full bathroom renovations from design to completion. Transform your space.</p></div>
+    <div class="srv-card"><div class="icon">&#9889;</div><h3>Emergency Service</h3><p>Burst pipe at 2am? We're on our way. 24/7 emergency plumbing — no extra charge.</p></div>
+  </div>
+</section>
+<section class="trust">
+  <h2 style="font-size:1.6em;font-weight:800">What Our Customers Say</h2>
+  <div class="trust-row">
+    <div class="trust-item"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Joe's team fixed our burst pipe in under an hour. Professional, clean, and fair pricing. Can't recommend enough."</p><div class="name">— Mark T.</div></div>
+    <div class="trust-item"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They installed our new water heater same day. The online booking was so easy — wish every contractor had this."</p><div class="name">— Sarah L.</div></div>
+    <div class="trust-item"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best plumber in Portland. Period. Fast, honest, and they actually show up on time."</p><div class="name">— David R.</div></div>
+  </div>
+</section>
+<section class="bottom-cta">
+  <h2>Need a plumber? Let's talk.</h2>
+  <p>Free estimates on all jobs. No obligation, no pressure.</p>
+  <a href="#" class="cta-btn" style="padding:16px 36px;font-size:1.05em">Get Your Free Quote</a>
+</section>
+<footer>&copy; 2026 Joe's Plumbing & Heating &mdash; Portland, OR &mdash; License #12345</footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bella's Hair Studio — Austin, TX</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0c0a09; --card:#1c1917; --border:#292524; --text:#e7e5e4; --muted:#a8a29e; --accent:#d97706; --accent2:#fbbf24; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:16px 32px; border-bottom:1px solid var(--border); }
+  .logo { font-size:1.3em; font-weight:800; color:var(--accent2); letter-spacing:0.06em; }
+  .nav-r { display:flex; gap:24px; align-items:center; }
+  .nav-r a { color:var(--muted); text-decoration:none; font-size:0.85em; font-weight:500; }
+  .cta-btn { background:var(--accent); color:#fff; padding:10px 22px; border-radius:8px; font-weight:700; font-size:0.85em; text-decoration:none; }
+  .hero { padding:80px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .hero-badge { display:inline-block; background:rgba(217,119,6,0.12); color:var(--accent2); font-size:0.75em; font-weight:600; padding:6px 14px; border-radius:20px; margin-bottom:20px; }
+  .hero h1 { font-size:2.8em; font-weight:900; letter-spacing:-0.03em; line-height:1.1; margin-bottom:16px; }
+  .hero h1 span { color:var(--accent2); }
+  .hero p { font-size:1.1em; color:var(--muted); margin-bottom:32px; line-height:1.6; }
+  .hero-btns { display:flex; gap:12px; justify-content:center; }
+  .btn-outline { border:1px solid var(--border); color:var(--text); padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.9em; }
+  .menu { padding:60px 32px; max-width:900px; margin:0 auto; }
+  .menu h2 { font-size:1.8em; font-weight:800; text-align:center; margin-bottom:32px; }
+  .menu-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .menu-item { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px 24px; display:flex; justify-content:space-between; align-items:center; }
+  .menu-item h3 { font-size:0.95em; font-weight:700; }
+  .menu-item .desc { font-size:0.78em; color:var(--muted); margin-top:2px; }
+  .menu-item .price { font-size:1.1em; font-weight:800; color:var(--accent2); }
+  .gallery { padding:40px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .gallery h2 { font-size:1.6em; font-weight:800; margin-bottom:24px; }
+  .gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .gallery-item { background:var(--card); border-radius:8px; aspect-ratio:1; display:flex; align-items:center; justify-content:center; border:1px solid var(--border); font-size:2em; }
+  .reviews { padding:40px 32px; max-width:900px; margin:0 auto; text-align:center; }
+  .reviews h2 { font-size:1.6em; font-weight:800; margin-bottom:24px; }
+  .rev-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .rev-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px; text-align:left; }
+  .rev-card .stars { color:var(--accent2); margin-bottom:8px; }
+  .rev-card p { font-size:0.82em; color:var(--muted); font-style:italic; line-height:1.5; }
+  .rev-card .name { font-size:0.78em; font-weight:600; color:var(--text); margin-top:8px; }
+  .bottom-cta { padding:60px 32px; text-align:center; }
+  .bottom-cta h2 { font-size:2em; font-weight:800; margin-bottom:12px; }
+  .bottom-cta p { color:var(--muted); margin-bottom:24px; }
+  footer { padding:24px 32px; text-align:center; border-top:1px solid var(--border); color:var(--muted); font-size:0.78em; }
+  .demo-banner { background:var(--accent); text-align:center; padding:8px; font-size:0.75em; font-weight:600; }
+  .demo-banner a { color:#fff; }
+</style>
+</head>
+<body>
+<div class="demo-banner">This is a concept redesign by <a href="../">Nexro Marketing</a> &mdash; <a href="../#cta">Get yours built</a></div>
+<nav>
+  <div class="logo">BELLA'S</div>
+  <div class="nav-r">
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Reviews</a>
+    <a href="#" class="cta-btn">Book Now</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-badge">Austin's Favorite Salon</div>
+  <h1>Hair that makes you <span>feel something.</span></h1>
+  <p>Cuts, color, styling, and extensions by Austin's top stylists. Walk out feeling like the best version of yourself.</p>
+  <div class="hero-btns">
+    <a href="#" class="cta-btn" style="padding:14px 32px;font-size:1em">Book Your Appointment</a>
+    <a href="#" class="btn-outline">View Our Work</a>
+  </div>
+</section>
+<section class="menu">
+  <h2>Services & Pricing</h2>
+  <div class="menu-grid">
+    <div class="menu-item"><div><h3>Women's Cut & Style</h3><div class="desc">Includes consultation, shampoo, cut & blowout</div></div><div class="price">$65+</div></div>
+    <div class="menu-item"><div><h3>Men's Cut</h3><div class="desc">Precision cut with hot towel finish</div></div><div class="price">$35+</div></div>
+    <div class="menu-item"><div><h3>Full Color</h3><div class="desc">Root to tip single-process color</div></div><div class="price">$95+</div></div>
+    <div class="menu-item"><div><h3>Highlights & Balayage</h3><div class="desc">Hand-painted or foil highlights</div></div><div class="price">$150+</div></div>
+    <div class="menu-item"><div><h3>Blowout & Style</h3><div class="desc">Wash, blow dry, and style</div></div><div class="price">$45+</div></div>
+    <div class="menu-item"><div><h3>Extensions</h3><div class="desc">Tape-in or hand-tied extensions</div></div><div class="price">$350+</div></div>
+  </div>
+</section>
+<section class="gallery">
+  <h2>Our Work</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item">&#128135;</div>
+    <div class="gallery-item">&#128131;</div>
+    <div class="gallery-item">&#129521;</div>
+    <div class="gallery-item">&#128134;</div>
+    <div class="gallery-item">&#128519;</div>
+    <div class="gallery-item">&#129519;</div>
+    <div class="gallery-item">&#128133;</div>
+    <div class="gallery-item">&#128516;</div>
+  </div>
+  <div style="font-size:0.75em;color:var(--muted);margin-top:12px">Real client photos would go here &mdash; these are placeholders</div>
+</section>
+<section class="reviews">
+  <h2>What Clients Say</h2>
+  <div class="rev-grid">
+    <div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best balayage I've ever had. Bella really listens to what you want and delivers every time."</p><div class="name">— Jessica M.</div></div>
+    <div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I've been going here for 2 years. The vibe is amazing and my hair always looks incredible."</p><div class="name">— Priya K.</div></div>
+    <div class="rev-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Online booking is so easy. No more phone tag. And the results are always worth the drive."</p><div class="name">— Taylor R.</div></div>
+  </div>
+</section>
+<section class="bottom-cta">
+  <h2>Ready for a new look?</h2>
+  <p>Book online in seconds. New clients get 15% off their first visit.</p>
+  <a href="#" class="cta-btn" style="padding:16px 36px;font-size:1.05em">Book Your Appointment</a>
+</section>
+<footer>&copy; 2026 Bella's Hair Studio &mdash; Austin, TX &mdash; Follow us on Instagram</footer>
+</body>
+</html>
